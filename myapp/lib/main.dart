@@ -13,24 +13,34 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      body: Row(
         children: [
-          Container(
-            color: Colors.cyan,
-            padding: EdgeInsets.all(20.0),
-            child: Text('one'),
+          Expanded(
+              flex: 3,
+              child: Image.asset('assets/jocke-wulcan.jpg')),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.cyan,
+              child: Text('1'),
+            ),
           ),
-          Container(
-            color: Colors.pinkAccent,
-            padding: EdgeInsets.all(30.0),
-            child: Text('two'),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.pinkAccent,
+              child: Text('2'),
+            ),
           ),
-          Container(
-            color: Colors.amber,
-            padding: EdgeInsets.all(40.0),
-            child: Text('three'),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.amber,
+              child: Text('3'),
+            ),
           ),
         ],
       ),
