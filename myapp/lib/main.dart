@@ -17,7 +17,7 @@ class _QuoteListState extends State<QuoteList> {
     Quote(text: 'I have nothing to declare except my genius', author: 'Oscar Wilde'),
     Quote(text: 'The truth is rarely pure and never simple', author: 'Oscar Wilde')
   ];
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +28,14 @@ class _QuoteListState extends State<QuoteList> {
         backgroundColor: Colors.redAccent,
       ),
       body: Column(
-        children: quotes.map((quote) => QuoteCard(quote: quote)).toList(),
+        children: quotes.map((quote) => QuoteCard(
+          quote: quote,
+          delete: () {
+            setState(() {
+              quotes.remove(quote);
+            });
+          }
+        )).toList(),
       ),
     );
   }
