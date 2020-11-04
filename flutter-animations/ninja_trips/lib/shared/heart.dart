@@ -8,19 +8,33 @@ class Heart extends StatefulWidget {
 class _HeartState extends State<Heart> with SingleTickerProviderStateMixin {
   bool isFav = false;
   AnimationController _controller;
-  Animation _colorAnimation;
+  Animation<Color> _colorAnimation;
+  Animation<double> _sizeAnimation;
 
   @override
   void initState() {
     super.initState();
 
     _controller = AnimationController(
-      duration: Duration(milliseconds: 500),
+      duration: Duration(milliseconds: 300),
       vsync: this,
     );
 
     _colorAnimation = ColorTween(begin: Colors.grey[400], end: Colors.red)
           .animate(_controller);
+
+    _sizeAnimation = TweenSequence(
+      <TweenSequenceItem<double>>[
+        TweenSequenceItem<double>(
+          tween: Tween<double>(begin: 30, end: 50),
+          weight: 50,
+        ),
+        TweenSequenceItem<double>(
+          tween: Tween<double>(begin: 50, end: 30),
+          weight: 50,
+        ),
+      ]
+    ).animate(_controller);
 
     _controller.addListener(() {
       print(_controller.value);
@@ -56,7 +70,7 @@ class _HeartState extends State<Heart> with SingleTickerProviderStateMixin {
           icon: Icon(
             Icons.favorite,
             color: _colorAnimation.value,
-            size: 30,
+            size: _sizeAnimation.value,
           ),
           onPressed: () {
             // start the controller
