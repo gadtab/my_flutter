@@ -36,7 +36,7 @@ class _HeartState extends State<Heart> with SingleTickerProviderStateMixin {
           tween: Tween<double>(begin: 50, end: 30),
           weight: 50,
         ),
-      ]s
+      ]
     ).animate(_curv);
 
     _controller.addListener(() {
