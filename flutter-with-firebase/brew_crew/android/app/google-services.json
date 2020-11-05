@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "348571490815",
+    "firebase_url": "https://tabachnik-brew-crew.firebaseio.com",
+    "project_id": "tabachnik-brew-crew",
+    "storage_bucket": "tabachnik-brew-crew.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348571490815:android:7098ee1d5fa9201c71afca",
+        "android_client_info": {
+          "package_name": "il.co.gadiworks.brew_crew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "348571490815-c7a0kn01u31c63veopm80490obo5sl3l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3KP1CINVxH-RVSA35ODfAqrj5JCddW1I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "348571490815-c7a0kn01u31c63veopm80490obo5sl3l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
