@@ -42,7 +42,7 @@ class DatabaseService {
         .map(_brewListFromSnapshot);
   }
 
-  // user doc stream
+  // get user doc stream
   Stream<UserData> get userData {
     return brewCollection.document(uid).snapshots()
       .map(_userDataFromSnapshot);
